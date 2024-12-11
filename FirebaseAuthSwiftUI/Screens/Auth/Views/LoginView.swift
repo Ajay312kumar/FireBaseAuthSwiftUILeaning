@@ -17,7 +17,6 @@ struct LoginView: View {
         ScrollView{
             
             VStack(spacing: 16){
-                //image
                 
                 Image("doggy")
                     .resizable()
@@ -78,26 +77,6 @@ struct LoginView: View {
                     }
                 }
                 .buttonStyle(CapsuleButtonStyle(bgColor: .clear, textColor: .black, hasBorder: true))
-                
-                
-                //text
-                
-                //email and password field
-                
-                //forgate password
-                
-                //login btn
-                
-                
-                //or line
-                
-                //sign up with Apple
-                
-                
-                // sign up with Google
-                
-                
-                //footer
                 
             }
             .ignoresSafeArea()
