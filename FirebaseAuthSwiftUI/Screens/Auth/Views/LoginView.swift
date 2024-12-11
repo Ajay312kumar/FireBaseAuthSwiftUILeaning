@@ -14,125 +14,118 @@ struct LoginView: View {
     
     var body: some View {
         
-        ScrollView{
-            
-            VStack(spacing: 16){
+        NavigationStack {
+            ScrollView{
                 
-                Image("doggy")
-                    .resizable()
-                    .scaledToFit()
-                
-                Text("Lets' us connect with us")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                
-                Spacer().frame(height: 12)
-                
-                
-                InputView(placeholder: "Enter email or Phone", text: $email)
-                
-                
-                InputView(placeholder: "Enter Password", isSecureField: true, text: $password)
-                
-                
-                HStack {
+                VStack(spacing: 16){
+                    
+                    Image("doggy")
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Text("Lets' us connect with us")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Spacer().frame(height: 12)
+                    
+                    
+                    InputView(placeholder: "Enter email or Phone", text: $email)
+                    
+                    
+                    InputView(placeholder: "Enter Password", isSecureField: true, text: $password)
+                    
+                    
+                    forgotPassword
+                    
+                    loginButton
+                    
                     Spacer()
                     
-                    Button{
-                        
-                    }label: {
-                        Text("Forgot Password?")
-                            .fontWeight(.medium)
-                            .foregroundStyle(.gray)
-                            .font(.subheadline)
-                    }
-                }
-                
-                Button{
+                    LabelledDivider(label: "OR")
                     
-                } label: {
-                    Text("Login")
-                }
-                .buttonStyle(CapsuleButtonStyle())
-                
-                
-                LabelledDivider(label: "OR")
-                
-                Button{
+                    appleButton
+                    googleButton
+                    dontHaveAccount
                     
-                } label: {
-                    Label("Sign up with Apple", systemImage: "apple.logo")
                 }
-                .buttonStyle(CapsuleButtonStyle(bgColor: .black))
-                
-                
-                Button{
-                    
-                }label: {
-                    HStack{
-                        Image("doggy")
-                            .resizable()
-                            .frame(width: 20, height: 20)
-                        Text("Sign up with Google")
-                    }
-                }
-                .buttonStyle(CapsuleButtonStyle(bgColor: .clear, textColor: .black, hasBorder: true))
-                
+                .ignoresSafeArea()
+                .padding(.horizontal)
+                .padding(.vertical, 5)
             }
-            .ignoresSafeArea()
-            .padding(.horizontal)
+            
         }
         
+        
     }
+    
+    private var forgotPassword: some View {
+        HStack {
+            Spacer()
+            
+            Button{
+                
+            }label: {
+                Text("Forgot Password?")
+                    .fontWeight(.medium)
+                    .foregroundStyle(.gray)
+                    .font(.subheadline)
+            }
+        }
+    }
+    
+    
+    
+    private var loginButton: some View {
+        Button{
+            
+        } label: {
+            Text("Login")
+        }
+        .buttonStyle(CapsuleButtonStyle())
+        
+    }
+    
+    private var appleButton: some View{
+        Button{
+            
+        } label: {
+            Label("Sign up with Apple", systemImage: "apple.logo")
+        }
+        .buttonStyle(CapsuleButtonStyle(bgColor: .black))
+    }
+    
+    
+    private var googleButton: some View{
+        Button{
+            
+        }label: {
+            HStack{
+                Image("doggy")
+                    .resizable()
+                    .frame(width: 20, height: 20)
+                Text("Sign up with Google")
+            }
+        }
+        .buttonStyle(CapsuleButtonStyle(bgColor: .clear, textColor: .black, hasBorder: true))
+    }
+    
+    private var dontHaveAccount: some View{
+        NavigationLink{
+            
+        } label: {
+            HStack{
+                Text("Don't have an account")
+                    .foregroundStyle(.black)
+                Text("Sign up")
+                    .foregroundStyle(.teal)
+            }
+            .fontWeight(.medium)
+        }
+    }
+    
 }
 
 #Preview {
     LoginView()
-}
-
-struct CapsuleButtonStyle: ButtonStyle{
-    
-    var bgColor: Color = .teal
-    var textColor: Color = .white
-    var hasBorder: Bool = false
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-        .fontWeight(.semibold)
-        .foregroundStyle(textColor)
-        .padding()
-        .frame(maxWidth: .infinity)
-        .background(Capsule().fill(bgColor))
-        .scaleEffect(configuration.isPressed ? 0.95 : 1)
-        .overlay{
-            hasBorder ?
-            Capsule()
-                .stroke(.gray, lineWidth: 1)
-            : nil
-        }
-    }
-}
-struct LabelledDivider: View {
-
-    let label: String
-    let horizontalPadding: CGFloat
-    let color: Color
-
-    init(label: String, horizontalPadding: CGFloat = 0, color: Color = .gray) {
-        self.label = label
-        self.horizontalPadding = horizontalPadding
-        self.color = color
-    }
-
-    var body: some View {
-        HStack {
-            line
-            Text(label).foregroundColor(color)
-            line
-        }
-    }
-
-    var line: some View {
-        VStack { Divider().background(color) }.padding(horizontalPadding)
-    }
 }
