@@ -11,6 +11,7 @@ struct LoginView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showPassword: Bool = false
     
     var body: some View {
         
@@ -19,10 +20,10 @@ struct LoginView: View {
                 
                 VStack(spacing: 16){
                     
-                    Image("doggy")
+                    Image("loginImage")
                         .resizable()
                         .scaledToFit()
-                    
+                        .frame(width: 200, height: 200)
                     Text("Lets' us connect with us")
                         .font(.title2)
                         .fontWeight(.semibold)
@@ -32,9 +33,21 @@ struct LoginView: View {
                     
                     InputView(placeholder: "Enter email or Phone", text: $email)
                     
-                    
-                    InputView(placeholder: "Enter Password", isSecureField: true, text: $password)
-                    
+                    ZStack(alignment: .trailing){
+                        InputView(placeholder: "Enter Password", isSecureField: !showPass, text: $password)
+                        Spacer()
+                        
+                        if !password.isEmpty{
+                            Image(systemName: showPassword ? "eye.fill" : "eye.slash.fill")
+                                .imageScale(.large)
+                                .fontWeight(.bold)
+                                .foregroundColor(.gray)
+                                .padding(.trailing, 10)
+                                .onTapGesture {
+                                    showPassword.toggle()
+                                }
+                        }
+                    }
                     
                     forgotPassword
                     
@@ -51,7 +64,7 @@ struct LoginView: View {
                 }
                 .ignoresSafeArea()
                 .padding(.horizontal)
-                .padding(.vertical, 5)
+                .padding(.vertical, 12)
             }
             
         }
@@ -101,7 +114,7 @@ struct LoginView: View {
             
         }label: {
             HStack{
-                Image("doggy")
+                Image("google")
                     .resizable()
                     .frame(width: 20, height: 20)
                 Text("Sign up with Google")
@@ -112,7 +125,7 @@ struct LoginView: View {
     
     private var dontHaveAccount: some View{
         NavigationLink{
-            
+            AccountDetailView()
         } label: {
             HStack{
                 Text("Don't have an account")
@@ -122,6 +135,10 @@ struct LoginView: View {
             }
             .fontWeight(.medium)
         }
+    }
+    
+    private var showPass: Bool {
+        return showPassword
     }
     
 }
