@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69515EE4166F955CF0B0ADEF /* Pods_FirebaseAuthSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9158697D581056A1A49A64F /* Pods_FirebaseAuthSwiftUI.framework */; };
 		B730A3ED2D07FC8B00580AA2 /* LoginAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B730A3EC2D07FC8A00580AA2 /* LoginAssets.xcassets */; };
 		B730A3EF2D07FDB700580AA2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730A3EE2D07FDB700580AA2 /* LoginView.swift */; };
 		B730A3F12D08089B00580AA2 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730A3F02D08089B00580AA2 /* InputView.swift */; };
 		B77665E92D0A987C00DDECC7 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77665E82D0A987C00DDECC7 /* AccountDetailView.swift */; };
 		B778F8BA2D099EBA0096AB49 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778F8B92D099EBA0096AB49 /* CapsuleButtonStyle.swift */; };
+		B7F199CD2D0C9864007B4982 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F199CC2D0C9864007B4982 /* User.swift */; };
+		B7F199CF2D0C9EBA007B4982 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C9FEE5C9968231647E060D9 /* Pods-FirebaseAuthSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B730A3CC2D07FAD600580AA2 /* FirebaseAuthSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B730A3EC2D07FC8A00580AA2 /* LoginAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LoginAssets.xcassets; sourceTree = "<group>"; };
 		B730A3EE2D07FDB700580AA2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B730A3F02D08089B00580AA2 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		B77665E82D0A987C00DDECC7 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		B778F8B92D099EBA0096AB49 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		B7F199CC2D0C9864007B4982 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C9A40C5FB01CDB322D37B0F4 /* Pods-FirebaseAuthSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		F9158697D581056A1A49A64F /* Pods_FirebaseAuthSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -36,18 +44,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69515EE4166F955CF0B0ADEF /* Pods_FirebaseAuthSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110048ECDAFCDC8129A3717C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9158697D581056A1A49A64F /* Pods_FirebaseAuthSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B47280D5D4F5B391E12EB7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEE5C9968231647E060D9 /* Pods-FirebaseAuthSwiftUI.debug.xcconfig */,
+				C9A40C5FB01CDB322D37B0F4 /* Pods-FirebaseAuthSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B730A3C32D07FAD600580AA2 = {
 			isa = PBXGroup;
 			children = (
 				B730A3CE2D07FAD600580AA2 /* FirebaseAuthSwiftUI */,
 				B730A3E02D07FB8200580AA2 /* Screens */,
 				B730A3CD2D07FAD600580AA2 /* Products */,
+				1B47280D5D4F5B391E12EB7D /* Pods */,
+				110048ECDAFCDC8129A3717C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +109,7 @@
 		B730A3E52D07FBA400580AA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7F199CC2D0C9864007B4982 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +117,7 @@
 		B730A3E62D07FBCD00580AA2 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -118,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B730A3DA2D07FADB00580AA2 /* Build configuration list for PBXNativeTarget "FirebaseAuthSwiftUI" */;
 			buildPhases = (
+				BE5DF4F96411B3B9344DDAB0 /* [CP] Check Pods Manifest.lock */,
 				B730A3C82D07FAD600580AA2 /* Sources */,
 				B730A3C92D07FAD600580AA2 /* Frameworks */,
 				B730A3CA2D07FAD600580AA2 /* Resources */,
+				3972285E063DF0C12131CE66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,8 +162,6 @@
 				B730A3CE2D07FAD600580AA2 /* FirebaseAuthSwiftUI */,
 			);
 			name = FirebaseAuthSwiftUI;
-			packageProductDependencies = (
-			);
 			productName = FirebaseAuthSwiftUI;
 			productReference = B730A3CC2D07FAD600580AA2 /* FirebaseAuthSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +211,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3972285E063DF0C12131CE66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE5DF4F96411B3B9344DDAB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FirebaseAuthSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B730A3C82D07FAD600580AA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -189,7 +261,9 @@
 				B778F8BA2D099EBA0096AB49 /* CapsuleButtonStyle.swift in Sources */,
 				B77665E92D0A987C00DDECC7 /* AccountDetailView.swift in Sources */,
 				B730A3EF2D07FDB700580AA2 /* LoginView.swift in Sources */,
+				B7F199CF2D0C9EBA007B4982 /* AuthViewModel.swift in Sources */,
 				B730A3F12D08089B00580AA2 /* InputView.swift in Sources */,
+				B7F199CD2D0C9864007B4982 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +391,7 @@
 		};
 		B730A3DB2D07FADB00580AA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9FEE5C9968231647E060D9 /* Pods-FirebaseAuthSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebaseAuthSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -345,6 +421,7 @@
 		};
 		B730A3DC2D07FADB00580AA2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A40C5FB01CDB322D37B0F4 /* Pods-FirebaseAuthSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -352,6 +429,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FirebaseAuthSwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

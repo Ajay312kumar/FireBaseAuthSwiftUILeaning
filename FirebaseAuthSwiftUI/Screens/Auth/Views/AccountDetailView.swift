@@ -9,7 +9,9 @@ struct AccountDetailView: View {
     @State private var isSecured: Bool = false
     @State private var confirmPassword: String = ""
     @State private var showPassword: Bool = false
+    @StateObject private var authViewModel = AuthViewModel()
     
+    @MainActor
     var body: some View {
         VStack {
             Text("Please complete all information to create an account")
@@ -58,7 +60,9 @@ struct AccountDetailView: View {
             Spacer()
             
             Button(action: {
-                // Action for account setup
+                Task{
+                    await authViewModel.createUser(email: email, fullName: fullName, password: password)
+                }
             }) {
                 Text("Create Account")
                     .frame(maxWidth: .infinity)
