@@ -12,6 +12,8 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var vm: UserAuthModel
     
     var body: some View {
         
@@ -91,7 +93,9 @@ struct LoginView: View {
     
     private var loginButton: some View {
         Button{
-            
+            Task{
+                await authViewModel.login(email: email, password: password)
+            }
         } label: {
             Text("Login")
         }
@@ -109,11 +113,11 @@ struct LoginView: View {
     }
     
     
-    private var googleButton: some View{
-        Button{
-            
-        }label: {
-            HStack{
+    private var googleButton: some View {
+        Button {
+            vm.signIn() // Calls the signIn method from UserAuthModel
+        } label: {
+            HStack {
                 Image("google")
                     .resizable()
                     .frame(width: 20, height: 20)
@@ -126,6 +130,7 @@ struct LoginView: View {
     private var dontHaveAccount: some View{
         NavigationLink{
             AccountDetailView()
+                .environmentObject(authViewModel)
         } label: {
             HStack{
                 Text("Don't have an account")

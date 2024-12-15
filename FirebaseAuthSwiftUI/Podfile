@@ -9,6 +9,9 @@ target 'FirebaseAuthSwiftUI' do
    pod 'FirebaseAuth'
    pod 'FirebaseFirestore'
    pod 'FirebaseStorage'
+   pod 'GoogleSignIn'
+   pod 'GoogleSignInSwiftSupport' 
+   pod 'Firebase/Core'
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     if target.name == 'BoringSSL-GRPC'

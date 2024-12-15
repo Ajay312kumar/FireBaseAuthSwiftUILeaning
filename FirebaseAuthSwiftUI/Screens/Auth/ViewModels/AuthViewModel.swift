@@ -22,6 +22,17 @@ class AuthViewModel: ObservableObject {
         
     }
     
+    func login(email: String, password: String) async {
+        do{
+            let authResult = try await auth.signIn(withEmail: email, password: password)
+            await fetchUser(by: authResult.user.uid)
+            print("currentUser", currentUser)
+        }catch{
+            isError = true
+        }
+    }
+    
+    
     func createUser(email: String, fullName: String, password: String) async {
         
         do{
@@ -48,4 +59,23 @@ class AuthViewModel: ObservableObject {
         }
     }
     
+    
+    func fetchUser(by uid: String) async{
+        do{
+            let document = try await firestore.collection("users").document(uid).getDocument()
+            currentUser = try document.data(as: User.self)
+        }catch{
+            isError = true
+        }
+    }
+    
+    func signOut(){
+        do{
+            userSession = nil
+            currentUser = nil
+            try auth.signOut()
+        }catch{
+            isError = true
+        }
+    }
 }

@@ -13,6 +13,8 @@
 		B730A3F12D08089B00580AA2 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B730A3F02D08089B00580AA2 /* InputView.swift */; };
 		B77665E92D0A987C00DDECC7 /* AccountDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77665E82D0A987C00DDECC7 /* AccountDetailView.swift */; };
 		B778F8BA2D099EBA0096AB49 /* CapsuleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778F8B92D099EBA0096AB49 /* CapsuleButtonStyle.swift */; };
+		B7C4A7692D0E9BA400982226 /* UserAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4A7682D0E9BA400982226 /* UserAuthModel.swift */; };
+		B7C4A76B2D0E9BFF00982226 /* GoogleAuthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4A76A2D0E9BFF00982226 /* GoogleAuthApp.swift */; };
 		B7F199CD2D0C9864007B4982 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F199CC2D0C9864007B4982 /* User.swift */; };
 		B7F199CF2D0C9EBA007B4982 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -25,15 +27,30 @@
 		B730A3F02D08089B00580AA2 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		B77665E82D0A987C00DDECC7 /* AccountDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailView.swift; sourceTree = "<group>"; };
 		B778F8B92D099EBA0096AB49 /* CapsuleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButtonStyle.swift; sourceTree = "<group>"; };
+		B7C4A7682D0E9BA400982226 /* UserAuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthModel.swift; sourceTree = "<group>"; };
+		B7C4A76A2D0E9BFF00982226 /* GoogleAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthApp.swift; sourceTree = "<group>"; };
 		B7F199CC2D0C9864007B4982 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		C9A40C5FB01CDB322D37B0F4 /* Pods-FirebaseAuthSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-FirebaseAuthSwiftUI/Pods-FirebaseAuthSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		F9158697D581056A1A49A64F /* Pods_FirebaseAuthSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseAuthSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B7C4A7572D0E9A2700982226 /* Exceptions for "FirebaseAuthSwiftUI" folder in "FirebaseAuthSwiftUI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B730A3CB2D07FAD600580AA2 /* FirebaseAuthSwiftUI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B730A3CE2D07FAD600580AA2 /* FirebaseAuthSwiftUI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B7C4A7572D0E9A2700982226 /* Exceptions for "FirebaseAuthSwiftUI" folder in "FirebaseAuthSwiftUI" target */,
+			);
 			path = FirebaseAuthSwiftUI;
 			sourceTree = "<group>";
 		};
@@ -118,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F199CE2D0C9EBA007B4982 /* AuthViewModel.swift */,
+				B7C4A7682D0E9BA400982226 /* UserAuthModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +147,7 @@
 				B730A3F02D08089B00580AA2 /* InputView.swift */,
 				B778F8B92D099EBA0096AB49 /* CapsuleButtonStyle.swift */,
 				B77665E82D0A987C00DDECC7 /* AccountDetailView.swift */,
+				B7C4A76A2D0E9BFF00982226 /* GoogleAuthApp.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +279,8 @@
 			files = (
 				B778F8BA2D099EBA0096AB49 /* CapsuleButtonStyle.swift in Sources */,
 				B77665E92D0A987C00DDECC7 /* AccountDetailView.swift in Sources */,
+				B7C4A76B2D0E9BFF00982226 /* GoogleAuthApp.swift in Sources */,
+				B7C4A7692D0E9BA400982226 /* UserAuthModel.swift in Sources */,
 				B730A3EF2D07FDB700580AA2 /* LoginView.swift in Sources */,
 				B7F199CF2D0C9EBA007B4982 /* AuthViewModel.swift in Sources */,
 				B730A3F12D08089B00580AA2 /* InputView.swift in Sources */,
@@ -401,6 +422,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseAuthSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -431,6 +453,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FirebaseAuthSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

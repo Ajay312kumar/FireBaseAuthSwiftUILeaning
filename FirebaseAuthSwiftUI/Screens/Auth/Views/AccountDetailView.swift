@@ -9,7 +9,7 @@ struct AccountDetailView: View {
     @State private var isSecured: Bool = false
     @State private var confirmPassword: String = ""
     @State private var showPassword: Bool = false
-    @StateObject private var authViewModel = AuthViewModel()
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     @MainActor
     var body: some View {
