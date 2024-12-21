@@ -58,6 +58,8 @@ struct LoginView: View {
                     Spacer()
                     
                     LabelledDivider(label: "OR")
+                   
+                    //just checking git push
                     
                     appleButton
                     googleButton
